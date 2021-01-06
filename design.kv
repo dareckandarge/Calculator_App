@@ -1,0 +1,156 @@
+<MyLayout>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        TextInput:
+            id: calcu_input
+            # display 0 in input box when calu app is first opened
+            text: "0"
+            halign: "right"  # aligns the text(0) to the right
+            font_size: 65
+            size_hint: (1, 0.2)
+
+        GridLayout:
+            cols: 4
+            rows: 5
+
+            # create app's buttons (4 colums and 5 rows)
+            # math operations (+,-,*,%)
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "%"
+                on_press: root.arithmetic("%")
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "C"
+                on_press: root.clear()
+
+            Button:
+                id: clear
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "<<"
+                on_press: root.delete_input()
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "/"
+                on_press: root.arithmetic("/")
+
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "7"
+                background_color: (0.7, 0.7, 0.7, 1)
+                on_press: root.pressed_number(7)
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "8"
+                background_color: (0.7, 0.7, 0.7, 1)
+                on_press: root.pressed_number(8)
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "9"
+                background_color: (0.7, 0.7, 0.7, 1)
+                on_press: root.pressed_number(9)
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "x"
+                on_press: root.arithmetic("x")
+
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "4"
+                background_color: (0.7, 0.7, 0.7, 1)
+                on_press: root.pressed_number(4)
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "5"
+                background_color: (0.7, 0.7, 0.7, 1)
+                on_press: root.pressed_number(5)
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "6"
+                background_color: (0.7, 0.7, 0.7, 1)
+                on_press: root.pressed_number(6)
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "-"
+                on_press: root.arithmetic("-")
+
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "1"
+                background_color: (0.7, 0.7, 0.7, 1)
+                on_press: root.pressed_number(1)
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "2"
+                background_color: (0.7, 0.7, 0.7, 1)
+                on_press: root.pressed_number(2)
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "3"
+                background_color: (0.7, 0.7, 0.7, 1)
+                on_press: root.pressed_number(3)
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "+"
+                on_press: root.arithmetic("+")
+
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "+/-"
+                on_press: root.make_positive_or_negative()
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "0"
+                background_color: (0.7, 0.7, 0.7, 1)
+                on_press: root.pressed_number(0)
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "."
+                on_press: root.decimal_sign()
+
+            Button:
+                size_hint: (0.2, 0.2)
+                font_size: 32
+                text: "="
+                on_press: root.equals()
+
+
+
